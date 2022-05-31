@@ -49,3 +49,8 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.input-number {
+    background-color: #3CBC8D;
+    color: white;
+}
