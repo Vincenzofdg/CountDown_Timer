@@ -8,7 +8,11 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <h1>New Years Eve</h1>
+        <div class="data-input">
+            <input class="input-number" type="number" min="0" placeholder="hours">
+            <input class="input-number" type="number" min="0" max="59" placeholder="minuts">
+            <input class="input-number" type="number" min="0" max="59" placeholder="seconds">
+        </div>
 
         <div class="countdown-container">
             <div class="countdown-el days-c">
@@ -29,10 +33,5 @@
             </div>
         </div>
 
-        <div class="data-input">
-            <input class="input-number" type="number" min="0" placeholder="hours">
-            <input type="number" min="0" max="59" placeholder="minuts">
-            <input type="number" min="0" max="59" placeholder="seconds">
-        </div>
     </body>
 </html>
