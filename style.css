@@ -8,9 +8,10 @@ body {
     background-color: blue;
     /* background-size: cover; */
     /* background-position: center center; */
-    display: grid;
-    place-items: center;
-    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     font-family: "Poppins", sans-serif;
     margin: 0;
 }
