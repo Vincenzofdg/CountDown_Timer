@@ -10,24 +10,24 @@
     <body>
         <div class="data-input">
             <div class="data-in-container">
-                <input class="input-number" placeholder="hours">
-                <input class="input-number" placeholder="minutes">
-                <input class="input-number" placeholder="seconds">
+                <input id="hours-in" class="input-number" placeholder="hours">
+                <input id="minutes-in" class="input-number" placeholder="minutes">
+                <input id="seconds-in" class="input-number" placeholder="seconds">
             </div>
-            <input class="input-btn" type="button" value="Run Timer">
+            <input id="run-btn" type="button" value="Run Timer">
         </div>
 
         <div class="countdown-container">
             <div class="countdown-el hours-c">
-                <p class="big-text" id="hours">00</p>
+                <p class="big-text" id="hours-display">0</p>
                 <span>hours</span>
             </div>
             <div class="countdown-el mins-c">
-                <p class="big-text" id="mins">00</p>
+                <p class="big-text" id="minutes-display">0</p>
                 <span>mins</span>
             </div>
             <div class="countdown-el seconds-c">
-                <p class="big-text" id="seconds">00</p>
+                <p class="big-text" id="seconds-display">0</p>
                 <span>seconds</span>
             </div>
         </div>
