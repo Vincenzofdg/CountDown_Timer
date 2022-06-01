@@ -8,19 +8,16 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-
         <div class="data-input">
-            <input class="input-number" type="number" min="1" placeholder="hours">
-            <input class="input-number" type="number" min="1" max="2" placeholder="minutes">
-            <input class="input-number" type="number" min="1" max="2" placeholder="seconds">
+            <div class="data-in-container">
+                <input class="input-number" placeholder="hours">
+                <input class="input-number" placeholder="minutes">
+                <input class="input-number" placeholder="seconds">
+            </div>
             <input class="input-btn" type="button" value="Run Timer">
         </div>
 
         <div class="countdown-container">
-            <div class="countdown-el days-c">
-                <p class="big-text" id="days">00</p>
-                <span>days</span>
-            </div>
             <div class="countdown-el hours-c">
                 <p class="big-text" id="hours">00</p>
                 <span>hours</span>
