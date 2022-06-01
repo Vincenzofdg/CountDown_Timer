@@ -40,13 +40,7 @@ body {
 .data-input {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-}
-
-.data-input {
-    display: flex;
-    justify-content: right;
-    width: 80%;
+    justify-content: left;
 }
 
 .data-in-container {
