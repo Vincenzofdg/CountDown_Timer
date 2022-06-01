@@ -46,6 +46,7 @@ btnRun.addEventListener('click', function () {
   second.innerText = Number(secondsData.value);
 
   const countDown = setInterval(timer, 1000)
+  setTimeout(console.log("parou"), 2000)
   // clearInterval(countDown);
 })
 
