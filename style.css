@@ -53,7 +53,7 @@ body {
     background-color: #000e2b;
     color: #cbafe7;
     cursor: pointer;
-    width: 135px;
+    width: 150px;
     margin: 5rem 0 3rem;
     padding: 16px 20px;
     border: none;
@@ -63,7 +63,7 @@ body {
 #run-btn {
     background-color: #3b409e;
     color: #cbafe7;
-    width: 80px;
+    width: 60px;
     margin: 5rem 0 3rem;
     padding: 16px 20px;
     border: none;
