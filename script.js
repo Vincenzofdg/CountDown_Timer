@@ -50,7 +50,7 @@ btnRun.addEventListener('click', function () {
 })
 
 function test() {
-  if (hoursData.value == "-1") console.log('PARA PARAR');
+  if (hour.value == "-1") console.log('PARA PARAR');
 }
 
 test();
@@ -60,3 +60,5 @@ validation(hoursData);
 validation(minutesData);
 validation(secondsData);
 reset();
+
+console.log('test')

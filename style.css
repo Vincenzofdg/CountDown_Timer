@@ -45,14 +45,14 @@ body {
 
 .data-input {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     width: 80%;
 }
 
 .data-in-container {
     width: 30%;
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
 }
 
 .input-number {
