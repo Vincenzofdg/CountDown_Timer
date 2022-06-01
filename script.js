@@ -25,11 +25,21 @@ function validation(param) {
   });
 }
 
+function timer() {
+  if (Number(secondsDisplay.innerText) === 0) {
+    reset();
+    clearInterval(countDown);
+  }
+    secondsDisplay.innerText = `${Number(secondsDisplay.innerText) - 1}`
+}
+
 // Running the Programm
 btnRun.addEventListener('click', function (event) {
   hoursDisplay.innerText = Number(hoursData.value);
   minutesDisplay.innerText = Number(minutesData.value);
   secondsDisplay.innerText = Number(secondsData.value);
+
+  const countDown = setInterval(timer, 1000)
 })
 
 // Deamon Actions
