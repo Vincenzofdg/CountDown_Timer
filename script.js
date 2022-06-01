@@ -26,7 +26,7 @@ function validation(param) {
 }
 
 function timer() {
-  console.log('ativo')
+  //console.log('ativo')
   clearInterval();
   if (Number(second.innerText) === 0) {
     if (Number(minute.innerText) === 0) {
@@ -34,7 +34,7 @@ function timer() {
       minute.innerText = "60";
     }
     minute.innerText = `${Number(minute.innerText) - 1}`;
-    second.innerText = "6";
+    second.innerText = "60";
   };
   second.innerText = `${Number(second.innerText) - 1}`
 }
@@ -46,7 +46,7 @@ btnRun.addEventListener('click', function () {
   second.innerText = Number(secondsData.value);
 
   const countDown = setInterval(timer, 1000);
-  const breaker = setTimeout(console.log("parou"), 2000);
+  // const breaker = setTimeout(console.log("parou"), 2000);
   // clearInterval(countDown);
 })
 
