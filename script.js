@@ -27,6 +27,7 @@ function validation(param) {
 
 function timer() {
   console.log('ativo')
+  clearInterval();
   if (Number(second.innerText) === 0) {
     if (Number(minute.innerText) === 0) {
       hour.innerText = `${Number(hour.innerText) - 1}`;
@@ -36,7 +37,6 @@ function timer() {
     second.innerText = "6";
   };
   second.innerText = `${Number(second.innerText) - 1}`
-  clearInterval();
 }
 
 // Running the Programm
@@ -45,11 +45,15 @@ btnRun.addEventListener('click', function () {
   minute.innerText = Number(minutesData.value);
   second.innerText = Number(secondsData.value);
 
-
   const countDown = setInterval(timer, 1000)
   // clearInterval(countDown);
-
 })
+
+function test() {
+  if (hoursData.value == "-1") console.log('PARA PARAR');
+}
+
+test();
 
 // Deamon Actions
 validation(hoursData);

@@ -50,9 +50,9 @@ body {
 }
 
 .data-in-container {
-    width: 50%;
+    width: 30%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: right;
 }
 
 .input-number {
