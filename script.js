@@ -1,18 +1,18 @@
 const hoursData = document.querySelector('#hours-in');
-const hoursDisplay = document.querySelector('#hours-display');
+const hour = document.querySelector('#hours-display');
 const minutesData = document.querySelector('#minutes-in');
-const minutesDisplay = document.querySelector('#minutes-display');
+const minute = document.querySelector('#minutes-display');
 const secondsData = document.querySelector('#seconds-in');
-const secondsDisplay = document.querySelector('#seconds-display');
+const second = document.querySelector('#seconds-display');
 const btnRun = document.querySelector('#run-btn');
 
 function reset() {
   hoursData.value = '';
   minutesData.value = '';
   secondsData.value = '';
-  hoursDisplay.innerText = "0";
-  minutesDisplay.innerText = "0";
-  secondsDisplay.innerText = "0";
+  hour.innerText = "0";
+  minute.innerText = "0";
+  second.innerText = "0";
 }
 
 function validation(param) {
@@ -26,20 +26,29 @@ function validation(param) {
 }
 
 function timer() {
-  if (Number(secondsDisplay.innerText) === 0) {
-    reset();
-    clearInterval(countDown);
-  }
-    secondsDisplay.innerText = `${Number(secondsDisplay.innerText) - 1}`
+  console.log('ativo')
+  if (Number(second.innerText) === 0) {
+    if (Number(minute.innerText) === 0) {
+      hour.innerText = `${Number(hour.innerText) - 1}`;
+      minute.innerText = "60";
+    }
+    minute.innerText = `${Number(minute.innerText) - 1}`;
+    second.innerText = "6";
+  };
+  second.innerText = `${Number(second.innerText) - 1}`
+  clearInterval();
 }
 
 // Running the Programm
-btnRun.addEventListener('click', function (event) {
-  hoursDisplay.innerText = Number(hoursData.value);
-  minutesDisplay.innerText = Number(minutesData.value);
-  secondsDisplay.innerText = Number(secondsData.value);
+btnRun.addEventListener('click', function () {
+  hour.innerText = Number(hoursData.value);
+  minute.innerText = Number(minutesData.value);
+  second.innerText = Number(secondsData.value);
+
 
   const countDown = setInterval(timer, 1000)
+  // clearInterval(countDown);
+
 })
 
 // Deamon Actions
