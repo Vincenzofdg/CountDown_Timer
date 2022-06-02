@@ -40,32 +40,42 @@ body {
 .data-input {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    width: 80%;
+    justify-content: center;
 }
 
-.data-in-container {
-    width: 40%;
+.data-input {
     display: flex;
     justify-content: space-evenly;
+    width: 40%;
 }
 
 .input-number {
-    background-color: #000e2b;
-    color: #cbafe7;
+    background-color: #092981;
+    font-weight: bold;
+    color: rgb(243, 225, 225);
     cursor: pointer;
-    width: 150px;
-    margin: 5rem 0 3rem;
+    width: 120px;
+    margin: 8rem 0 3rem;
     padding: 16px 20px;
     border: none;
     border-radius: 4px;
 }
 
-#run-btn {
+.menu-btn {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem 2rem 4rem;
+    width: 180px;
+}
+
+.action-btn {
     background-color: #3b409e;
     color: #cbafe7;
-    width: 60px;
-    margin: 5rem 0 3rem;
+    font-weight: bold;
+    width: 80px;
     padding: 16px 20px;
     border: none;
     border-radius: 4px;

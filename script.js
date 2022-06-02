@@ -4,7 +4,13 @@ const minutesData = document.querySelector('#minutes-in');
 const minute = document.querySelector('#minutes-display');
 const secondsData = document.querySelector('#seconds-in');
 const second = document.querySelector('#seconds-display');
-const btnRun = document.querySelector('#run-btn');
+
+const btnStart = document.querySelector('#start');
+const btnStop = document.querySelector('#clean');
+
+// Alarme Sound Importation
+const sound = new Audio();
+sound.src = './sound.wav'
 
 function reset() {
   hoursData.value = '';
@@ -25,9 +31,15 @@ function validation(param) {
   });
 }
 
+function convert() {
+  const hourMil = Number(hoursData.value) * 60 * 60 * 1000;
+  const minMil = Number(minutesData.value) * 60 * 1000;
+  const secMil = Number(secondsData.value) * 1000;
+
+  return hourMil + minMil + secMil + 1000;
+}
+
 function timer() {
-  //console.log('ativo')
-  clearInterval();
   if (Number(second.innerText) === 0) {
     if (Number(minute.innerText) === 0) {
       hour.innerText = `${Number(hour.innerText) - 1}`;
@@ -40,26 +52,29 @@ function timer() {
 }
 
 // Running the Programm
-btnRun.addEventListener('click', function () {
+// Start
+btnStart.addEventListener('click', function () {
   hour.innerText = Number(hoursData.value);
   minute.innerText = Number(minutesData.value);
   second.innerText = Number(secondsData.value);
 
-  const countDown = setInterval(timer, 1000);
-  // const breaker = setTimeout(console.log("parou"), 2000);
-  // clearInterval(countDown);
+  const countDown = setInterval(timer, 1000)
+
+  setTimeout(() => {
+    clearInterval(countDown);
+    sound.play();
+    reset()
+  }, convert());
 })
 
-function test() {
-  if (hour.value == "-1") console.log('PARA PARAR');
-}
-
-test();
+// Clean
+btnStop.addEventListener('click', function () {
+  document.location.reload(true);
+})
 
 // Deamon Actions
 validation(hoursData);
 validation(minutesData);
 validation(secondsData);
-reset();
 
-console.log('test')
+reset();
