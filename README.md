@@ -1,5 +1,7 @@
 ## Knowledges:
- - Pure JavaScrip, CSS and HTML;
+- DOM and Selector;
+- Working with Elements;
+- Events;
 
 ## Preview:
 
