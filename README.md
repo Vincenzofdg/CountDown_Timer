@@ -8,6 +8,6 @@ Since it's a simple application, there was no reason for using any framework.
 - Working with Elements;
 - Events;
 
-## Preview:
+## Preview: 
 
 ![image](preview.gif)
