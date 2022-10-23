@@ -3,16 +3,23 @@ import {StyleSheet, View} from 'react-native';
 
 import Context from '../Context/context';
 import Input from './elements/timeInput';
+import Counter from './elements/timerContDown';
 
 function ContainerUp() {
-  const {hour, min, sec, setHour, setMin, setSec} = useContext(Context);
+  const context = useContext(Context);
 
   return (
-    <View style={styles}>
-      <Input num={hour} tag="h" setter={setHour} />
-      <Input num={min} tag="m" setter={setMin} />
-      <Input num={sec} tag="s" setter={setSec} />
-    </View>
+    <>
+      {context.total.display ? (
+        <Counter total={context.total.value} />
+      ) : (
+        <View style={styles}>
+          <Input num={context.hour} tag="h" setter={context.setHour} />
+          <Input num={context.min} tag="m" setter={context.setMin} />
+          <Input num={context.sec} tag="s" setter={context.setSec} />
+        </View>
+      )}
+    </>
   );
 }
 

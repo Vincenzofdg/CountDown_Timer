@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, TextInput} from 'react-native';
 
-function Timer({num, tag, setter}) {
+function Input({num, tag, setter}) {
   const ruleTag = t => {
     switch (t) {
       case 'h':
@@ -19,27 +19,25 @@ function Timer({num, tag, setter}) {
   const handleChange = p => {
     const rule = ruleTag(tag);
     if (p >= rule) {
-      setter(0);
+      setter('0');
       return;
     }
 
-    setter(Number(p));
+    setter(p);
   };
 
   return (
-    <>
-      <View>
-        <TextInput
-          style={styles.input}
-          keyboardType="numeric"
-          value={num}
-          maxLength={2}
-          onPressIn={() => setter()}
-          onChangeText={newValue => handleChange(newValue)}
-        />
-        <Text style={styles.span}>{tag}</Text>
-      </View>
-    </>
+    <View>
+      <TextInput
+        style={styles.input}
+        keyboardType="numeric"
+        value={num}
+        maxLength={2}
+        onPressIn={() => setter()}
+        onChangeText={newValue => handleChange(newValue)}
+      />
+      <Text style={styles.span}>{tag}</Text>
+    </View>
   );
 }
 
@@ -56,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Timer;
+export default Input;
