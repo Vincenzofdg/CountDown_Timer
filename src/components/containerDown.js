@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Pressable, Text} from 'react-native';
 import Input from './elements/timeInput';
 
 import Context from '../Context/context';
@@ -8,21 +8,39 @@ function ContainerDown() {
   const {hour, min, sec} = useContext(Context);
 
   return (
-    <View style={styles.time}>
-      {/* <Input value={hour.value} name={hour.display} />
-      <Input value={min.value} name={min.display} />
-      <Input value={sec.value} name={sec.display} /> */}
+    <View style={styles.container}>
+      <View style={styles.time}>
+        <Input value={hour} name="hours" />
+        <Input value={min} name="minutes" />
+        <Input value={sec} name="seconds" />
+      </View>
+      <Pressable style={styles.btn}>
+        <Text>Start</Text>
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+  },
   time: {
-    backgroundColor: 'green',
     height: 250,
-    // flex: 1,
-    // flexDirection: 'row',
-    // alignContent: 'space-between',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  btn: {
+    width: 150,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    borderRadius: 6,
+    elevation: 3,
+    backgroundColor: '#841584',
+    marginLeft: 135,
   },
 });
 

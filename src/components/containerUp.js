@@ -8,9 +8,9 @@ function ContainerUp() {
 
   return (
     <View style={styles.display}>
-      <Text style={styles.timer}>{hour.value + hour.display}</Text>
-      <Text style={styles.timer}>{min.value + min.display}</Text>
-      <Text style={styles.timer}>{sec.value + sec.display}</Text>
+      <Text style={styles.timer}>{hour + 'h'}</Text>
+      <Text style={styles.timer}>{min + 'm'}</Text>
+      <Text style={styles.timer}>{sec + 's'}</Text>
     </View>
   );
 }
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignItems: 'center',
     padding: 20,
+    marginTop: 30,
   },
   timer: {
     fontSize: 45,
