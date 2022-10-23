@@ -1,32 +1,28 @@
 import React, {useContext} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 import Context from '../Context/context';
+import Input from './elements/timeInput';
 
 function ContainerUp() {
-  const {hour, min, sec} = useContext(Context);
+  const {hour, min, sec, setHour, setMin, setSec} = useContext(Context);
 
   return (
-    <View style={styles.display}>
-      <Text style={styles.timer}>{hour + 'h'}</Text>
-      <Text style={styles.timer}>{min + 'm'}</Text>
-      <Text style={styles.timer}>{sec + 's'}</Text>
+    <View style={styles}>
+      <Input num={hour} tag="h" setter={setHour} />
+      <Input num={min} tag="m" setter={setMin} />
+      <Input num={sec} tag="s" setter={setSec} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  display: {
-    height: 250,
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    padding: 20,
-    marginTop: 30,
-  },
-  timer: {
-    fontSize: 45,
-  },
+  height: 250,
+  flexDirection: 'row',
+  justifyContent: 'space-evenly',
+  alignItems: 'center',
+  padding: 20,
+  marginTop: 30,
 });
 
 export default ContainerUp;
