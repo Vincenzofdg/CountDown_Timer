@@ -8,6 +8,11 @@ Since it's a simple application, there was no reason for using any framework.
 - Working with Elements;
 - Events;
 
-## Preview:
+## Additional packages:
+- [Native CountDown Component](https://github.com/talalmajali/react-native-countdown-component)
+- [React Native Sound](https://github.com/zmxv/react-native-sound)
+- [React Native Restart](https://github.com/avishayil/react-native-restart)
+
+## Preview: 
 
 ![image](preview.gif)
