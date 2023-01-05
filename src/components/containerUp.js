@@ -2,16 +2,16 @@ import React, {useContext} from 'react';
 import {StyleSheet, View} from 'react-native';
 
 import Context from '../Context/context';
-import Input from './elements/timeInput';
-import Counter from './elements/timerContDown';
+import Input from './Timer/input';
+import Counter from './Timer/countdown';
 
 function ContainerUp() {
   const context = useContext(Context);
 
   return (
     <>
-      {context.total.display ? (
-        <Counter total={context.total.value} />
+    {context.start ? (
+        <Counter />
       ) : (
         <View style={styles}>
           <Input num={context.hour} tag="h" setter={context.setHour} />
