@@ -1,9 +1,8 @@
-# CountDown Timer
-
+## Description:
 On this project I intended to create a simple countdown timer to help on daily tasks by managing time and keeping users aware of time speeding.
 Since it's a simple application, there was no reason for using any framework.
 
-## Knowledges:
+## About the Project:
 - DOM and Selector;
 - Working with Elements;
 - Events;
@@ -13,6 +12,5 @@ Since it's a simple application, there was no reason for using any framework.
 - [React Native Sound](https://github.com/zmxv/react-native-sound)
 - [React Native Restart](https://github.com/avishayil/react-native-restart)
 
-## Preview: 
-
+## Preview
 ![image](preview.gif)
