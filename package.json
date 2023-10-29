@@ -13,6 +13,7 @@
     "react": "18.2.0",
     "react-native": "0.72.5",
     "react-native-countdown-component": "^2.7.1",
+    "react-native-rename": "^3.2.13",
     "react-native-restart": "^0.0.27",
     "react-native-sound": "^0.11.2"
   },
