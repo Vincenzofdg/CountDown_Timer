@@ -1,4 +1,4 @@
-package com.countdown_timer;
+package com.vkountdown_timer;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
