@@ -1,82 +1,43 @@
-import React, {useContext} from 'react';
-import {StyleSheet, View, Pressable, Text} from 'react-native';
+import React, {useContext, useEffect} from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import Sound from 'react-native-sound';
+
+import countDown from '../hook/countDown';
 
 import Context from '../Context/context';
 import Alarm from '../sound/sound.wav';
 
 function ContainerDown() {
-  const { hour, min, sec, setSec, setMin, setHour, setStart } = useContext(Context);
-  const SECOND = 1000;
+  const { timer, setTimer } = useContext(Context);
   const song = new Sound(Alarm);
-  let firstMin = 0;
 
-  const handleOnPress = () => {
-    const hourToSec = hour * 60 * 60 || 0;
-    const minToSec = min * 60 || 0;
-    const secToSec = sec || 0;
-    
-    setStart(true)
+  const playAlarm = () => {
+    song.setVolume(1);
+    song.play();
+  }
 
-    const timer = setInterval(() => {
-      // console.log(hour + ':' + min + ':' + sec)
+  const handlePress = () => {
+    const hours = timer.hour * 60 * 60;
+    const minutes = timer.minute * 60;
+    const seconds = timer.second;
+    const total = hours + minutes + seconds;
 
-      // if (sec === 0) {
-      //     if (min === 0) {
-      //       setHour(prev => prev - 1);
-      //       setMin(60);
-      //     }
-      //     setMin(prev => prev - 1);
-      //     setSec(60);
-      //   }
-      
-      setSec(prevSec => {
-        if (prevSec > 0) return prevSec - 1;
-        if (prevSec === 0)  {
-          setMin(prevMin => {
-            firstMin += 1
-            console.log(firstMin)
-            if (firstMin === 1) return;
-            return prevMin - 1
-          })
-          return 60
-        };
-        return; 
-      });
-    }, SECOND)
-
-    setTimeout(() => {
-      clearInterval(timer);
-      song.setVolume(1);
-      song.play();
-      setHour(0)
-      setMin(0)
-      setSec(0)
-      setStart(false)
-    }, (((hourToSec + minToSec + secToSec) * 1000) + SECOND));
-  };
+    countDown(total, setTimer, playAlarm)
+  }
 
   return (
-    <View style={styles.display}>
-      <Pressable
-        disabled={ !hour && !min && !sec }
-        style={styles.btn} 
-        onPress={() => handleOnPress()}
+      <TouchableOpacity
+        style={styles.container} 
+        onPress={handlePress}
       >
         <Text style={styles.text}>Start</Text>
-      </Pressable>
-    </View>
+      </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
-  display: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 150,
-  },
-  btn: {
+  container: {
+    alignSelf: 'center',
     width: 125,
     height: 50,
     alignItems: 'center',

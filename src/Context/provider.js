@@ -2,16 +2,12 @@ import React, {useState} from 'react';
 import Context from './context';
 
 function Provider({children}) {
-  const [hour, setHour] = useState(0);
-  const [min, setMin] = useState(0);
-  const [sec, setSec] = useState(0);
+  const [timer, setTimer] = useState({hour: 0, minute: 0, second: 0})
   const [total, setTotal] = useState(0);
   const [start, setStart] = useState(false);
 
   const obj = {
-    hour, setHour,
-    min, setMin,
-    sec, setSec,
+    timer, setTimer,
     total, setTotal,
     start, setStart
   };

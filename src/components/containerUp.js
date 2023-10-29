@@ -6,17 +6,19 @@ import Input from './Timer/input';
 import Counter from './Timer/countdown';
 
 function ContainerUp() {
-  const context = useContext(Context);
+  const {start, timer, setTimer} = useContext(Context);
 
   return (
     <>
-    {context.start ? (
+    {start ? (
         <Counter />
       ) : (
         <View style={styles}>
-          <Input num={context.hour} tag="h" setter={context.setHour} />
-          <Input num={context.min} tag="m" setter={context.setMin} />
-          <Input num={context.sec} tag="s" setter={context.setSec} />
+          {
+            [...Object.keys(timer)].map((e) => (
+              <Input key={e} kind={e} value={timer[e]} setter={setTimer} />
+            ))
+          }
         </View>
       )}
     </>
