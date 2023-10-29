@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface countdown_timerTests : XCTestCase
+@interface vkountdowntimerTests : XCTestCase
 
 @end
 
-@implementation countdown_timerTests
+@implementation vkountdowntimerTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

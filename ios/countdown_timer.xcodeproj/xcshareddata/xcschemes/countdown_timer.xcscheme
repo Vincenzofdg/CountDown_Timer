@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "countdown_timer.app"
-               BlueprintName = "countdown_timer"
-               ReferencedContainer = "container:countdown_timer.xcodeproj">
+               BuildableName = "vkountdowntimer.app"
+               BlueprintName = "vkountdowntimer"
+               ReferencedContainer = "container:vkountdowntimer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "countdown_timerTests.xctest"
-               BlueprintName = "countdown_timerTests"
-               ReferencedContainer = "container:countdown_timer.xcodeproj">
+               BuildableName = "vkountdowntimerTests.xctest"
+               BlueprintName = "vkountdowntimerTests"
+               ReferencedContainer = "container:vkountdowntimer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "countdown_timer.app"
-            BlueprintName = "countdown_timer"
-            ReferencedContainer = "container:countdown_timer.xcodeproj">
+            BuildableName = "vkountdowntimer.app"
+            BlueprintName = "vkountdowntimer"
+            ReferencedContainer = "container:vkountdowntimer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "countdown_timer.app"
-            BlueprintName = "countdown_timer"
-            ReferencedContainer = "container:countdown_timer.xcodeproj">
+            BuildableName = "vkountdowntimer.app"
+            BlueprintName = "vkountdowntimer"
+            ReferencedContainer = "container:vkountdowntimer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

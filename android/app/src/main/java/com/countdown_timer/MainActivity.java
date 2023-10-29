@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "countdown_timer";
+    return "vkountdown_timer";
   }
 
   /**
